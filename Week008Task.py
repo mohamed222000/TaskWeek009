@@ -83,12 +83,14 @@ if st.button("OK!"):
             for i in range(size):
                 st.write("TITLE",x,":")
                 st.write(myRequest.json()["articles"][x]["title"])
+                st.image(myRequest.json()["articles"][x]["urlToImage"])
                 st.write("AUTHOR IS:")
                 st.write(myRequest.json()["articles"][x]["author"])
                 st.write("TO CHECK URL:")
                 st.write(myRequest.json()["articles"][x]["url"])
                 st.write("THIS ARTICLE PUBLISHED AT:")
-                st.write(myRequest.json()["articles"][x]["publishedAt"])
+                st.write(myRequest.json()["articles"][x]["publishedAt"]
+                )
                 x +=1
 
         else:
